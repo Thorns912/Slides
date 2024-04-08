@@ -162,9 +162,9 @@ function showSlides(n) {
   if (!autoSlide) { // Check if automatic transitions are disabled
     autoSlide = true; // Re-enable automatic transitions
     clearTimeout(slideShowTimer);
-    slideShowTimer = setTimeout(function() {  
-      setTimeout(showSlides, 5000); // Start the new timer
-    }, 2000);
+    //slideShowTimer = setTimeout(function() {  
+     // setTimeout(showSlides, 5000); // Start the new timer
+   // }, 2000);
   } 
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -181,8 +181,8 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  if (autoSlide){
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  //if (autoSlide){
+ // setTimeout(showSlides, 5000); // Change image every 5 seconds
   }
 }
 </script>
