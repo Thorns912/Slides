@@ -144,13 +144,16 @@ img {vertical-align: middle;}
 
 <script>
 let slideIndex = 0;
+let autoSlide = true;
 showSlides(slideIndex);
 
 function plusSlides(n) {
+  autoSlide = false;
   showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
+   autoSlide = false;
   showSlides(slideIndex = n);
 }
 
@@ -170,7 +173,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  if (autoSlide){
   setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
 }
 </script>
 
